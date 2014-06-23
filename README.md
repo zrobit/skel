@@ -1,4 +1,4 @@
-skel
+Skel
 ====
 
-Un esqueleto para desarrollo frontend
+Un esqueleto minimalista para desarrollo frontend con gulpjs.com
