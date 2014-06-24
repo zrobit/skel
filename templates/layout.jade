@@ -1,0 +1,41 @@
+block vars
+
+include includes/mixins
+
+doctype
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7(lang='es')
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8(lang='es')
+//if IE 8
+  html.no-js.lt-ie9(lang='es')
+//if IE 9
+  html.no-js.lt-ie10(lang='es')
+//[if gt IE 8]><!
+html(lang='es')
+  //<![endif]
+  head
+    meta( charset='utf-8' )
+    title= page.title
+    meta( name='description', content=page.description )
+    meta( name='keywords', content=page.keywords )
+
+    block styles
+      link( href=static_url('main.css'), rel='stylesheet' )
+
+  body#body
+    #page.page
+      block page
+        block header
+          include includes/header
+      
+        section#content.content
+          block content
+      
+        block footer
+          include includes/footer
+    
+    block scripts
+      //- script(data-main=static_url('scripts/main'), src=static_url('scripts/libs/require.js'))
+      //- +analytics
+      
