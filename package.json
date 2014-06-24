@@ -12,7 +12,9 @@
     "express": "^4.4.4",
     "gulp": "^3.8.1",
     "gulp-jade": "*",
+    "gulp-livereload": "^2.1.0",
     "gulp-stylus": "*",
+    "gulp-watch": "^0.6.8",
     "jade": "*",
     "nib": "*",
     "stylus": "*"
