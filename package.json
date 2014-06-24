@@ -1,0 +1,20 @@
+{
+  "name": "skel",
+  "version": "0.0.0",
+  "description": "Un esqueleto para desarrollo frontend",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zrobit/skel.git"
+  },
+  "author": "zrobit",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.4.4",
+    "gulp": "^3.8.1",
+    "gulp-jade": "*",
+    "gulp-stylus": "*",
+    "jade": "*",
+    "nib": "*",
+    "stylus": "*"
+  }
+}
