@@ -5,21 +5,12 @@ handler.page = config.page;
 
 handler.pretty = true;
 
-handler.envs = {
-  node: {
-    static_url: function ( url ) {
-      return config.envs.node.static_url + url;
-    }
-  },
-  django: {
-    static_url: function ( url ) {
-      return config.envs.node.static_url + url;
-    }
-  }
+handler.set_env = function(env){
+  handler.env = env;
 };
 
-handler.set_env = function(env){
-  handler.static_url = handler.envs[env].static_url;
+handler.static_url = function(url){
+  return config.envs[config.env[handler.env]].static_url + url;
 };
 
 module.exports = handler;

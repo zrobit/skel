@@ -6,7 +6,7 @@ var express = require('express'),
   app = express(),
   host = ['0.0.0.0', 8001];
 
-handler.set_env('node');
+handler.set_env('dev');
 
 app.set('view engine', 'jade');
 

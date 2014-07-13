@@ -8,8 +8,7 @@ var gulp = require('gulp'),
     handler = require('./handler.js');
 
 gulp.task('templates', function() {
-  var env = require('./config.js').env.deploy;
-  handler.set_env(env);
+  handler.set_env('deploy');
   gulp.src(config.templates.src)
     .pipe(jade({locals: handler}))
     .pipe(gulp.dest(config.templates.dest));

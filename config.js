@@ -3,7 +3,7 @@ var config = {};
 //envs config
 config.env = {
   dev: 'node',
-  deploy: 'django' //values: django, dist,
+  deploy: 'dist' //values: django, dist,
 };
 
 //Page configuration
