@@ -4,27 +4,25 @@ var gulp = require('gulp'),
     nib = require('nib'),
     watch = require('gulp-watch'),
     livereload = require('gulp-livereload'),
+    config = require('./config.js').gulp,
     handler = require('./handler.js');
 
-var paths = {
-  templates: ['templates/**/*.jade', '!templates/includes/**/*.jade'],
-  styles:['styles/**/*.styl', '!styles/modules/**/*'],
-  scripts:['scripts/**/*.js'],
-  images:['images/**/*',],
-  fonts:['fonts/**/*']
-};
-
-gulp.task('jade', function() {
-  handler.set_env('node');
-  gulp.src(paths.templates)
+gulp.task('templates', function() {
+  var env = require('./config.js').env.deploy;
+  handler.set_env(env);
+  gulp.src(config.templates.src)
     .pipe(jade({locals: handler}))
-    .pipe(gulp.dest('build/templates'));
+    .pipe(gulp.dest(config.templates.dest));
 });
 
-gulp.task('stylus', function () {
-  gulp.src(paths.styles)
+gulp.task('styles', function () {
+  gulp.src(config.styles.src)
     .pipe(stylus({use: [nib()]}))
-    .pipe(gulp.dest('build/styles'));
+    .pipe(gulp.dest(config.styles.dest));
+});
+
+gulp.task('scripts', function () {
+
 });
 
 gulp.task('watch', function () {
@@ -32,3 +30,5 @@ gulp.task('watch', function () {
     .pipe(watch())
     .pipe(livereload());
 });
+
+gulp.task('deploy', ['templates', 'styles', 'scripts']);
