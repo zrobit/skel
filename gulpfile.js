@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     jade = require('gulp-jade'),
     stylus = require('gulp-stylus'),
     nib = require('nib'),
+    sprites = require('gulp.spritesmith'),
     watch = require('gulp-watch'),
     livereload = require('gulp-livereload'),
     config = require('./config.js').gulp,
@@ -29,5 +30,25 @@ gulp.task('watch', function () {
     .pipe(watch())
     .pipe(livereload());
 });
+
+// var gulp = require('gulp');
+
+gulp.task('sprites', function () {
+  var spriteData = gulp.src('images/sprites/*.png').pipe(sprites({
+    imgName: 'sprites.png',
+    cssName: 'sprites.styl',
+    imgPath : '../images/sprites.png',
+    algorithm: 'binary-tree',
+    cssOpts: {
+      cssClass: function (item) {
+        return '.'+item.name;
+      }
+    },
+    cssFormat: 'css'
+  }));
+  spriteData.img.pipe(gulp.dest('images/'));
+  spriteData.css.pipe(gulp.dest('styles/modules/'));
+});
+
 
 gulp.task('deploy', ['templates', 'styles', 'scripts']);
