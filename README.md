@@ -1,7 +1,7 @@
 Skel
 ====
 
-Un esqueleto minimalista para desarrollo frontend con gulpjs
+Un esqueleto minimalista para desarrollo y maquetación frontend con: jade, stylus, gulpjs
 
 TODO
 ----
