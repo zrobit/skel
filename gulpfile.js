@@ -12,9 +12,10 @@ var gulp = require('gulp'),
 
 
 gulp.task('watch', function () {
+  livereload.listen();
   gulp.src(['templates/**/*.jade', 'styles/**/*.styl'])
-    .pipe(watch())
-    .pipe(livereload());
+    .pipe(watch(['templates/**/*.jade', 'styles/**/*.styl']))
+    .pipe(livereload({quiet: true}));
 });
 
 
