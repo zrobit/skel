@@ -11,8 +11,10 @@
   "devDependencies": {
     "express": "^4.12.3",
     "gulp": "^3.8.11",
+    "gulp-insert": "^0.4.0",
     "gulp-jade": "^1.0.0",
     "gulp-livereload": "^3.8.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sprite-glue": "0.0.5",
     "gulp-stylus": "^2.0.1",
     "gulp-watch": "^4.2.2",
