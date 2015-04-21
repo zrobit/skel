@@ -15,13 +15,14 @@ doctype
 html(lang='es')
   //<![endif]
   head
-    meta( charset='utf-8' )
+    meta(charset='utf-8')
     title= page.title
-    meta( name='description', content=page.description )
-    meta( name='keywords', content=page.keywords )
+    meta(name='description', content=page.description)
+    meta(name='keywords', content=page.keywords)
+    meta(name="viewport", content="width=device-width, initial-scale=1")
 
     block styles
-      link( href=static_url('styles/main.css'), rel='stylesheet' )
+      link(href=static_url('styles/main.css'), rel='stylesheet' )
 
   body#body
     #page.page
