@@ -9,17 +9,17 @@
   "author": "zrobit",
   "license": "ISC",
   "devDependencies": {
-    "express": "^4.12.3",
-    "gulp": "^3.8.11",
-    "gulp-insert": "^0.4.0",
-    "gulp-jade": "^1.0.0",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-jade": "^1.1.0",
     "gulp-livereload": "^3.8.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sprite-glue": "0.0.5",
-    "gulp-stylus": "^2.0.1",
-    "gulp-watch": "^4.2.2",
-    "jade": "^1.9.2",
+    "gulp-sprite-glue": "^0.1.1",
+    "gulp-stylus": "^2.0.6",
+    "gulp-watch": "^4.3.5",
+    "jade": "^1.11.0",
     "nib": "^1.1.0",
-    "stylus": "^0.50.0"
+    "stylus": "^0.52.0"
   }
 }
