@@ -16,10 +16,10 @@
     "gulp-livereload": "^3.8.0",
     "gulp-rename": "^1.2.2",
     "gulp-sprite-glue": "^0.1.1",
-    "gulp-stylus": "^2.0.6",
+    "gulp-stylus": "^2.0.7",
     "gulp-watch": "^4.3.5",
     "jade": "^1.11.0",
     "nib": "^1.1.0",
-    "stylus": "^0.52.0"
+    "stylus": "^0.52.4"
   }
 }
