@@ -38,7 +38,6 @@ gulp.task('scripts', function () {
 
 });
 
-
 gulp.task('sprites_img', function () {
   gulp.src('images/icons')
     .pipe(glue({
@@ -50,7 +49,6 @@ gulp.task('sprites_img', function () {
     }));
 });
 
-
 gulp.task('sprites_css_stylus', ['sprites_img'], function () {
   gulp.src('build/static/styles/sprites/icons.css')
     .pipe(insert.wrap('@css{', '}'))
@@ -59,5 +57,26 @@ gulp.task('sprites_css_stylus', ['sprites_img'], function () {
 });
 
 
+gulp.task('copy-images', function () {
+  gulp.src(config.images.src)
+    .pipe(gulp.dest(config.images.dest));
+});
+
+gulp.task('copy-fonts', function () {
+  gulp.src(config.fonts.src)
+    .pipe(gulp.dest(config.fonts.dest));
+});
+
+gulp.task('copy-scripts', function () {
+  gulp.src(config.scripts.src)
+    .pipe(gulp.dest(config.scripts.dest));
+});
+
+
 gulp.task('sprites', ['sprites_img', 'sprites_css_stylus']);
+
+gulp.task('copy', ['copy-images', 'copy-fonts', 'copy-scripts']);
+
+gulp.task('dev', ['templates', 'styles', 'copy']);
+
 gulp.task('deploy', ['templates', 'styles', 'scripts']);
