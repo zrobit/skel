@@ -8,8 +8,9 @@ var gulp = require('gulp'),
     insert = require('gulp-insert'),
     rename = require('gulp-rename'),
     config = require('./config.js').gulp,
-    handler = require('./handler.js');
-
+    handler = require('./handler.js'),
+    iconfont = require('gulp-iconfont'),
+    consolidate = require('gulp-consolidate');
 
 gulp.task('watch', function () {
   livereload.listen();
@@ -54,6 +55,32 @@ gulp.task('sprites_css_stylus', ['sprites_img'], function () {
     .pipe(insert.wrap('@css{', '}'))
     .pipe(rename('sprites.styl'))
     .pipe(gulp.dest('styles/modules/'));
+});
+
+gulp.task('icon-fonts', function(){
+  var fontName= 'iconfont';
+  return gulp.src(['images/icons/*.svg'])
+    .pipe(iconfont({
+      fontName: fontName,
+      formats: ['ttf', 'eot', 'woff', 'svg'],
+      autohint: false,
+      fontHeight: 512,
+      normalize: true
+    }))
+
+    .on('glyphs', function(glyphs) {
+      var options = {
+        glyphs : glyphs.map(function(glyph){
+          return {name: glyph.name, codepoint: glyph.unicode[0].charCodeAt(0).toString(16) };
+        }),
+        fontName: fontName,
+        fontPath: '../fonts/icons/',
+      };
+      gulp.src('styles/templates/icons.styl')
+        .pipe(consolidate('lodash', options))
+        .pipe(gulp.dest('styles/modules/'));
+    })
+    .pipe(gulp.dest('fonts/icons/'));
 });
 
 
