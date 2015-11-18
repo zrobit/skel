@@ -1,31 +1,33 @@
-@font-face {
-  font-family: "iconfont";
-  src: url('../fonts/icons/iconfont.eot');
-  src: url('../fonts/icons/iconfont.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/icons/iconfont.woff') format('woff'),
-    url('../fonts/icons/iconfont.ttf') format('truetype'),
-    url('../fonts/icons/iconfont.svg#iconfont') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+@css{
+  @font-face {
+    font-family: "iconfont";
+    src: url('../fonts/icons/iconfont.eot');
+    src: url('../fonts/icons/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/icons/iconfont.woff') format('woff'),
+      url('../fonts/icons/iconfont.ttf') format('truetype'),
+      url('../fonts/icons/iconfont.svg#iconfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
 
-[class^="icon-"]
-[class*=" icon-"]{
-  // display inline-block
-  font-family "iconfont"
-  speak none
-  font-variant normal
-  text-transform none
-  text-decoration none
-  font-style normal
-  line-height 1
-  font-weight normal
-  position relative
-  /* Better Font Rendering =========== */
-  -o-transform: scale(1);
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-rendering optimizeLegibility
+  [class^="icon-"]:before,
+  [class*=" icon-"]:before{
+    font-family "iconfont"
+    speak none
+    font-variant normal
+    text-transform none
+    text-decoration none
+    font-style normal
+    line-height 1
+    font-weight normal
+    position relative
+    display inline-block
+    /* Better Font Rendering =========== */
+    -o-transform: scale(1);
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
+    text-rendering optimizeLegibility
+  }
 }
 
 .icon-eye:before
