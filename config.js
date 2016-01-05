@@ -3,7 +3,7 @@ var config = {};
 //envs config
 config.env = {
   dev: 'node',
-  deploy: 'django' //values: django, dist,
+  deploy: 'dist' //values: django, dist,
 };
 
 //Page configuration
@@ -45,23 +45,18 @@ config.envs = {
 
 config.gulp = {
   templates: {
-    src: ['templates/**/*.jade', '!templates/**/_*.jade', '!templates/includes/**/*.jade'],
     dest: config.envs[config.env.deploy].templates
   },
   scripts: {
-    src: ['scripts/**/*.js'],
     dest: config.envs[config.env.deploy].static + 'scripts/'
   },
   styles: {
-    src: ['styles/**/*.styl', '!styles/modules/**/*', '!styles/sections/**/*'],
     dest: config.envs[config.env.deploy].static + 'styles/'
   },
   images: {
-    src: ['images/**/*', '!images/icons/**/*'],
     dest: config.envs[config.env.deploy].static + 'images/'
   },
   fonts: {
-    src: ['fonts/**/*'],
     dest: config.envs[config.env.deploy].static + 'fonts/'
   }
 };
