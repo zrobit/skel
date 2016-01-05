@@ -11,11 +11,13 @@
   "devDependencies": {
     "express": "^4.13.3",
     "gulp": "^3.9.0",
+    "gulp-changed-in-place": "^2.0.3",
     "gulp-consolidate": "^0.1.2",
     "gulp-iconfont": "^4.0.2",
     "gulp-insert": "^0.5.0",
     "gulp-jade": "^1.1.0",
     "gulp-livereload": "^3.8.0",
+    "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sprite-glue": "^0.1.1",
     "gulp-stylus": "^2.0.7",
