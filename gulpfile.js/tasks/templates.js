@@ -6,24 +6,20 @@ var gulp = require('gulp'),
     config = require(__base + 'config.js').gulp,
     handler = require(__base + 'handler.js');
 
-
 var src = [
   'templates/**/*.jade',
   '!templates/**/_*.jade',
   '!templates/includes/**/*.jade'
   ];
 
-
 handler.set_env('deploy');
-var templates = function(){
+function templates(){
   return gulp.src(src)
-    .pipe(jade({locals: handler}))
+    .pipe(jade({locals: handler, pretty:true}))
     .pipe(gulp.dest(config.templates.dest));
 };
 
-
-var templates_watch = function(){
-  console.log('holaaa');
+function templates_watch(){
   return gulp.src(src)
     .pipe(plumber())
     .pipe(changed())
@@ -32,8 +28,6 @@ var templates_watch = function(){
     .pipe(livereload());
 };
 
-
-gulp.task('templates', templates);
 gulp.task('templates:watch', templates_watch);
-
+gulp.task('templates', templates);
 module.exports = templates;
