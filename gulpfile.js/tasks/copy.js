@@ -3,20 +3,20 @@ var gulp = require('gulp'),
     handler = require(__base + 'handler.js');
 
 
-var scripts = function(){
+function scripts () {
   return gulp.src(src)
     .pipe(gulp.dest(config.scripts.dest));
 };
 
 
-var images = function(){
+function images () {
   var src = ['images/**/*', '!images/icons/**/*'];
   return gulp.src(src)
     .pipe(gulp.dest(config.images.dest));
 };
 
 
-var fonts = function(){
+function fonts () {
   var src =  ['fonts/**/*'];
   return gulp.src(src)
     .pipe(gulp.dest(config.fonts.dest));

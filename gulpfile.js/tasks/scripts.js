@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     handler = require(__base + 'handler.js');
 
 
-var scripts = function(){
+var scripts = function () {
   console.log('to be implmented');
 };
 

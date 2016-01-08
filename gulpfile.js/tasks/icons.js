@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     consolidate = require('gulp-consolidate');
 
 
-var icons = function(){
+function icons () {
   var fontName= 'iconfont';
   return gulp.src(['images/icons/*.svg'])
     .pipe(iconfont({

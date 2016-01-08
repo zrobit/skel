@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     handler = require(__base + 'handler.js');
 
 
-var watch = function(){
+function watch () {
   livereload.listen();
   gulp.watch(['templates/**/*.jade'], ['templates:watch']);
   gulp.watch(['styles/**/*.styl'], function(){

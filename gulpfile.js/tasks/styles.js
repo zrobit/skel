@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     config = require(__base + 'config.js').gulp;
 
 
-var src = [
+const src = [
   'styles/**/*.styl',
   '!styles/modules/**/*',
   '!styles/sections/**/*',
@@ -12,7 +12,7 @@ var src = [
   ];
 
 
-var styles = function(){
+function styles () {
   return gulp.src(src)
     .pipe(stylus({use: [nib()]}))
     .pipe(gulp.dest(config.styles.dest));
