@@ -16,15 +16,16 @@
     "gulp-iconfont": "^4.0.2",
     "gulp-insert": "^0.5.0",
     "gulp-jade": "^1.1.0",
-    "gulp-livereload": "^3.8.0",
+    "gulp-livereload": "^3.8.1",
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sprite-glue": "^0.1.1",
-    "gulp-stylus": "^2.0.7",
+    "gulp-stylus": "^2.2.0",
     "gulp-watch": "^4.3.5",
     "jade": "^1.11.0",
     "lodash": "^3.10.1",
     "nib": "^1.1.0",
-    "stylus": "^0.52.4"
+    "stylus": "^0.53.0",
+    "through2": "^2.0.0"
   }
 }
