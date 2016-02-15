@@ -10,7 +10,7 @@ function watch () {
   gulp.watch(['styles/**/*.styl'], function(){
     livereload.reload();
   });
-};
+}
 
 
 gulp.task('watch', watch);
