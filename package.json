@@ -4,23 +4,23 @@
   "description": "Un esqueleto para desarrollo frontend",
   "author": "zrobit",
   "devDependencies": {
-    "express": "^4.13.3",
-    "gulp": "^3.9.0",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
     "gulp-changed-in-place": "^2.0.3",
     "gulp-consolidate": "^0.1.2",
     "gulp-iconfont": "^4.0.2",
     "gulp-insert": "^0.5.0",
     "gulp-jade": "^1.1.0",
     "gulp-livereload": "^3.8.1",
-    "gulp-plumber": "^1.0.1",
+    "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sprite-glue": "^0.1.1",
-    "gulp-stylus": "^2.2.0",
+    "gulp-stylus": "^2.3.0",
     "gulp-watch": "^4.3.5",
     "jade": "^1.11.0",
     "lodash": "^3.10.1",
     "nib": "^1.1.0",
     "stylus": "^0.53.0",
-    "through2": "^2.0.0"
+    "through2": "^2.0.1"
   }
 }
