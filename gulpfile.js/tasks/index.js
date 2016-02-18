@@ -1,3 +1,4 @@
+// jshint esversion: 6
 exports.watch = require("./watch.js");
 exports.templates = require("./templates.js");
 exports.styles = require("./styles.js");

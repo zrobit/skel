@@ -1,3 +1,4 @@
+// jshint esversion: 6
 var gulp = require('gulp'),
     iconfont = require('gulp-iconfont'),
     consolidate = require('gulp-consolidate');
@@ -26,7 +27,7 @@ function icons () {
         .pipe(gulp.dest('styles/modules/'));
     })
     .pipe(gulp.dest('fonts/icons/'));
-};
+}
 
 
 gulp.task('icons', icons);

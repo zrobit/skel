@@ -1,23 +1,23 @@
+// jshint esversion: 6
 var gulp = require('gulp'),
-    nib = require('nib'),
     stylus = require('gulp-stylus'),
-    config = require(__base + 'config.js').gulp;
+    path = require(__base + 'config.js').path;
 
-
-const src = [
-  'styles/**/*.styl',
-  '!styles/modules/**/*',
-  '!styles/sections/**/*',
-  '!styles/templates/**/*'
-  ];
-
+const src = ['styles/main.styl'];
+const dest = path.static + 'styles/';
 
 function styles () {
-  return gulp.src(src)
-    .pipe(stylus({use: [nib()]}))
-    .pipe(gulp.dest(config.styles.dest));
-};
+  return gulp
+    .src(src)
+    .pipe(stylus())
+    .pipe(gulp.dest(dest));
+}
 
+function styles_deploy (){
+  console.log('para ser implementado');
+
+}
 
 gulp.task('styles', styles);
+// gulp.task('styles:deploy', styles_deploy);
 module.exports = styles;

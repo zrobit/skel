@@ -1,3 +1,4 @@
+// jshint esversion: 6
 var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     config = require(__base + 'config.js').gulp,
