@@ -10,23 +10,23 @@
     font-style: normal;
   }
 
-  [class^="icon-"]:before,
-  [class*=" icon-"]:before{
-    font-family "<%= fontName %>"
-    speak none
-    font-variant normal
-    text-transform none
-    text-decoration none
-    font-style normal
-    line-height 1
-    font-weight normal
-    position relative
+  [class^="icon-"],
+  [class*=" icon-"]{
+    font-family: "<%= fontName %>";
+    speak: none;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none;
+    font-style: normal;
+    line-height: 1;
+    font-weight: normal;
+    // position: relative;
     display inline-block
     /* Better Font Rendering =========== */
     -o-transform: scale(1);
-    -webkit-font-smoothing antialiased
-    -moz-osx-font-smoothing grayscale
-    text-rendering optimizeLegibility
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 }
 <% _.each(glyphs, function(glyph) { %>

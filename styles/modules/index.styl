@@ -1,23 +1,51 @@
-@import 'nib'
+// http://itcss.io/
+//http://patternlab.io/
 
+// Settings: Global variables, config switches.
+@import 'settings/global'
+@import 'settings/colors'
+
+
+// Tools: Default mixins and functions.
+// @import 'nib'
+@import 'tools/blocks'
+@import 'tools/mixins'
+@import 'tools/extends'
+
+
+// Generic: Ground-zero styles (Normalize.css, resets, box-sizing).
 @import 'normalize'
 
-@import 'fonts'
 
-@import 'icons'
+// Base: Unclassed HTML elements (type selectors).
+@import 'base/fontface'
+@import 'base/page'
+@import 'base/text'
+// @import 'base/lists'
+// @import 'base/images'
+// @import 'base/forms'
+// @import 'base/inputs'
+// @import 'base/tables'
 
-@import 'variables'
 
-@import 'classes'
+// Objects: Cosmetic-free design patterns.
+@import 'objects/layout'
+@import 'objects/grid'
+@import 'objects/cards'
+@import 'objects/icons'
+@import 'objects/buttons'
+@import 'objects/navigations'
+@import 'objects/boxes'
+// @import 'objects/tabs'
+// @import 'objects/alerts'
+// @import 'objects/breadcrumbs'
+// @import 'objects/pagination'
 
-@import 'sprites'
 
-@import 'grid'
+// Components: Designed components, chunks of UI.
+@import 'components/search-form'
+// @import 'components/header-nav'
+// @import 'components/footer-nav'
 
-@import 'layout'
-
-@import 'buttons'
-
-@import 'navigations'
-
-@import 'forms'
+// Trumps: Helpers and overrides.
+@import 'helpers'

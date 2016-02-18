@@ -1,0 +1,46 @@
+$clearfix
+  clearfix()
+
+
+$list-ui
+  {out_box_zero}
+  list-style none
+
+
+$button
+  display inline-block
+  margin-bottom 0 // For input.btn
+  font-weight 100
+  text-align center
+  vertical-align middle
+  cursor pointer
+  background-image none // Reset unusual Firefox-on-Android default style see https//github.com/necolas/normalize.css/issues/214
+  border 1px solid transparent
+  white-space nowrap
+  user-select none
+  box-sizing border-box
+  text-decoration none
+  // padding 0
+
+
+$card
+  box-sizing border-box
+  border-radius 4px
+  border-bottom 1px solid darken(body_bg, 10)
+  background #fff
+
+//ul
+$inline-list
+  @extends $list-ui
+  li
+    float left
+
+$vertical-list
+  @extends $list-ui
+
+$ad-box
+  display block
+  text-align center
+  vertical-align middle
+  background gray(20)
+  color gray(40)
