@@ -16,28 +16,28 @@ app.use('/static/styles', stylus.middleware({
   dest: __dirname + '/build/static/styles',
   serve: true,
   forse: false,
-  compile: function ( str, path ) {
+  compile: function (str, path) {
     return stylus(str).set('filename', path).use(nib());
   }
 }));
 
-app.use( '/static/styles', express.static( __dirname + '/build/static/styles' ));
-app.use( '/static/scripts', express.static( __dirname + '/scripts' ));
-app.use( '/static/images', express.static( __dirname + '/images' ));
-app.use( '/static/fonts', express.static( __dirname + '/fonts' ));
+app.use('/static/styles', express.static(__dirname + '/build/static/styles'));
+app.use('/static/scripts', express.static(__dirname + '/scripts'));
+app.use('/static/images', express.static(__dirname + '/images'));
+app.use('/static/fonts', express.static(__dirname + '/fonts'));
 
-app.get( '/', function(req, res) {
-  res.render( __dirname + '/templates/home.jade', handler);
+app.get('/', function(req, res) {
+  res.render(__dirname + '/templates/home.jade', handler);
 });
 
 app.get(/^\/([a-z0-9\/\-]+)$/, function(req, res) {
-  res.render( __dirname + '/templates/' + req.params[0] + '.jade', handler );
+  res.render(__dirname + '/templates/' + req.params[0] + '.jade', handler );
 });
 
-if ( process.argv[2] ) {
+if (process.argv[2]) {
   host = process.argv[2].split('host=').join('').split(':');
 }
 
-app.listen( host[1] , host[0] );
+app.listen(host[1] ,host[0]);
 
-console.log('node server ' + host[0] + ':' + host[1] );
+console.log('node server ' + host[0] + ':' + host[1]);
