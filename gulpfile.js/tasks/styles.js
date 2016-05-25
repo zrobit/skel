@@ -14,10 +14,16 @@ function styles () {
 }
 
 function styles_deploy (){
-  console.log('para ser implementado');
+  var postcss = require('gulp-postcss');
+  var autoprefixer = require('autoprefixer');
+  var plugins = [autoprefixer()];
+  return gulp
+    .src(dest+'main.css')
+    .pipe(postcss(plugins))
+    .pipe(gulp.dest(dest));
 
 }
 
 gulp.task('styles', styles);
-// gulp.task('styles:deploy', styles_deploy);
+gulp.task('styles:deploy', styles_deploy);
 module.exports = styles;

@@ -30,7 +30,7 @@ config.envs = {
     static_url : '/static/'
   },
   dist: {
-    static_url : 'static/',
+    static_url: 'static/',
     templates: 'dist/',
     static: 'dist/static/'
   },

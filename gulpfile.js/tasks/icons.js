@@ -16,7 +16,7 @@ function icons () {
 
     .on('glyphs', function(glyphs) {
       var options = {
-        glyphs : glyphs.map(function(glyph){
+        glyphs: glyphs.map(function(glyph){
           return {name: glyph.name, codepoint: glyph.unicode[0].charCodeAt(0).toString(16) };
         }),
         fontName: fontName,

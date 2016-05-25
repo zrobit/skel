@@ -13,10 +13,10 @@ const src = {
 
 
 const dest = {
-  static : path.static,
-  scripts : path.static + 'scripts/',
-  images : path.static + 'images/',
-  fonts : path.static + 'fonts/'
+  static: path.static,
+  scripts: path.static + 'scripts/',
+  images: path.static + 'images/',
+  fonts: path.static + 'fonts/'
 };
 
 function scripts (){
