@@ -4,6 +4,8 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     plumber = require('gulp-plumber'),
     changed = require('gulp-changed-in-place'),
+    htmlmin = require('gulp-htmlmin'),
+    prettify = require('gulp-prettify'),
     path = require(__base + 'config.js').path,
     handler = require(__base + 'handler.js');
 
@@ -16,13 +18,6 @@ const dest = path.templates;
 
 handler.set_env('deploy');
 
-function templates(){
-  return gulp
-    .src(src)
-    .pipe(jade({locals: handler, pretty:true}))
-    .pipe(gulp.dest(dest));
-}
-
 function templates_watch(){
   return gulp
     .src(src)
@@ -33,6 +28,28 @@ function templates_watch(){
     .pipe(livereload());
 }
 
+function templates(){
+  return gulp
+    .src(src)
+    .pipe(jade({locals: handler, pretty:true}))
+    .pipe(gulp.dest(dest));
+}
+
+function templates_deploy(){
+  return gulp
+    .src(src)
+    .pipe(jade({locals: handler, pretty:true}))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true,
+      removeEmptyAttributes: true
+    }))
+
+    // .pipe(prettify({indent_size: 2}))
+    .pipe(gulp.dest(dest));
+}
+
+
 gulp.task('templates:watch', templates_watch);
 gulp.task('templates', templates);
-module.exports = templates;
+gulp.task('templates:deploy', templates_deploy);
