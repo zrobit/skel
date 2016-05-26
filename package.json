@@ -5,6 +5,8 @@
   "author": "zrobit",
   "devDependencies": {
     "autoprefixer": "^6.3.3",
+    "css-mqpacker": "^5.0.1",
+    "cssnano": "^3.6.2",
     "express": "^4.13.4",
     "gulp": "^3.9.1",
     "gulp-changed-in-place": "^2.0.3",

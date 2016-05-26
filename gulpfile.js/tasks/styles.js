@@ -15,8 +15,11 @@ function styles () {
 
 function styles_deploy (){
   var postcss = require('gulp-postcss');
-  var autoprefixer = require('autoprefixer');
-  var plugins = [autoprefixer()];
+  var plugins = [
+      require("css-mqpacker")(),
+      require('autoprefixer')(),
+      require('cssnano')(),
+  ];
   return gulp
     .src(dest+'main.css')
     .pipe(postcss(plugins))
