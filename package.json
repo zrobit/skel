@@ -7,6 +7,7 @@
     "autoprefixer": "^6.3.3",
     "css-mqpacker": "^5.0.1",
     "cssnano": "^3.6.2",
+    "expose-loader": "^0.7.1",
     "express": "^4.13.4",
     "gulp": "^3.9.1",
     "gulp-changed-in-place": "^2.0.3",
@@ -28,6 +29,7 @@
     "nib": "^1.1.0",
     "postcss": "^5.0.16",
     "stylus": "^0.53.0",
-    "through2": "^2.0.1"
+    "through2": "^2.0.1",
+    "webpack": "^1.13.1"
   }
 }
